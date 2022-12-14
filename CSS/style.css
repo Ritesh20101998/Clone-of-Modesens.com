@@ -1,0 +1,212 @@
+/* Navbar here */
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.nav{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.nav > .logo{
+    width:20%;
+    /* border: 1px solid red; */
+}
+.nav > .logo > img{
+    width: 80%;
+    height: 100%;
+    padding-left: 50px;
+} 
+.navbar{
+    display: flex;
+    width: 60%;
+    /* border: 1px solid red; */
+    justify-content: space-evenly;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.navbar-icons{
+   color: black;
+   margin: auto;
+   display: flex;
+   justify-content: space-evenly;
+   width: 10%;
+}
+.active {
+    /* background-color: black; */
+    color:black;
+    font-size:30px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+/* Slideshow here */
+* 
+{
+    box-sizing:border-box;
+}
+#slideshow{
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    position: relative;
+    width: 70%;
+    overflow: hidden;
+}
+.images{
+    display: flex;
+    width: 100%;
+}
+.images > img{
+    height: 400px;
+    width: 100%;
+    transition: all 0.15s ease;
+}
+.images input{
+    display: none;
+}
+.dots{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+.dots > label{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid black 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+.dots label:hover{
+    background: gray;
+}
+
+#img1:checked ~ .m1{
+    margin-left: 0;
+}
+#img2:checked ~ .m2{
+    margin-left: -100%;
+}
+#img3:checked ~ .m3{
+    margin-left: -200%;
+}
+#img4:checked ~ .m4{
+    margin-left: -300%;
+} 
+
+/* Category here mentioned */
+.category{
+    margin: auto;
+    text-align: center;
+}
+.category h2{
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size:36px;
+}
+.category p{
+    font-weight: normal;
+    font-family: sans-serif;
+    font-size:22px;
+}
+.category > #brands {
+    margin: 0px;
+    text-align: center;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 10px;
+}
+.category > #brands {
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap:20px 40px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    /* border-bottom: 1px solid red;
+    border-top: 1px solid red; */
+}
+.category > #brands >img{
+    width: 100%;
+    height: 120px;
+}
+
+/* Varieties are here */
+.varieties {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.varieties > h1{
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size:36px;
+}
+.varieties > .accessories{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    gap:10px;
+}
+.varieties .accessories > div{
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+.varieties .accessories > div > img{
+    margin-top: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+}
+
+/* Community */
+.com{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+.com > h1{
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size:36px;
+}
+.com > #community{
+    /* border:1px solid red; */
+    margin: auto;
+    text-align: center;
+    display: flex;
+ 
+}
+.com > #community > img{
+    /* border:1px solid red; */
+    padding: 10px;
+    width: 25%;
+    height: 400px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding-bottom: 20px;
+}
+.com > button{
+    margin-top: 25px;
+    height: 45px;
+    width: 120px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size:16px;
+}
