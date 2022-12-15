@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
     <link rel="stylesheet" href="./CSS/style.css">
+    
     <title>Home Page</title>
     <style>
     
@@ -19,22 +22,23 @@
             <img src="Images\logo.jpeg" alt="">
         </div>
         <div class="navbar">
-            <h4>MEN</h4>
-            <h4>WOMEN</h4>
-            <h4>KIDS</h4>
-            <h4>BEAUTY</h4>
-            <h4>HOME</h4>
-            <h4>DESIGNERS</h4>
-            <h4>COMMUNITY</h4>
-            <h4>SALE</h4>
-            <h4>GIFT GUIDE</h4>
+            <a class="active" href="men"><h4>MEN</h4></a>
+            <a class="active" href="women"><h4>WOMEN</h4></a>
+            <a class="active" href="kids"><h4>KIDS</h4></a>
+            <a class="active" href="beauty"><h4>BEAUTY</h4></a>
+            <a class="active" href="home"><h4>HOME</h4></a>
+            <a class="active" href="designers"><h4>DESIGNERS</h4></a>
+            <a class="active" href="community"><h4>COMMUNITY</h4></a>
+            <h4 class="active" >SALE</h4>
+            <h4 class="active">GIFT GUIDE</h4>
         </div>
         <div class="navbar-icons">
-            <a class="active" href="#"><i class="fa fa-shopping-bag"></i></a>
-            <a class="active" href="#"><i class="fa fa-fw fa-user"></i></a>
-            <a class="active" href="#"><i class="fa fa-fw fa-search"></i></a> 
+            <a class="active" id="cart" href="cart"><i class="fa fa-shopping-cart" style="color:purple"></i></a>
+            <a class="active" id="user" href="user"><i class="fa fa-fw fa-user" style="color:purple"></i></a> 
+            <a class="active" id="search" href="#"><i class="fa fa-fw fa-search" style="color:purple"></i></a> 
         </div>
     </div>
+
     <!-- Slideshow container for Banner -->
     <div id="slideshow">
         <div class="slider">
@@ -119,6 +123,34 @@
         </div>
     </div>
 
+    <!-- Special Offers -->
+    <div id="special">
+        <h1>Special Offers</h1>
+        <div id="offers">
+            <div>
+                <img src="https://www.savingchief.com/wp-content/uploads/2020/07/mytheresa-30-off-sale.png" alt="sale">
+                <h4>Sale Start Now with Up to 50% off</h4>
+                <h5>Enjoy free shipping for a short time only.</h5>
+                <button>SHOP NOW</button>
+            </div>
+            <div>
+                <img src="https://th.bing.com/th/id/OIP.o6c-m76flxFN3up0xA0G9wHaHa?pid=ImgDet&w=626&h=626&rs=1" alt="sale">
+                <h4>OMG! So Fresh!</h4>
+                <h5>Shop New to Sale Now</h5>
+                <button>SHOP NOW</button>
+            </div>
+            <div>
+                <img src="https://www.savingchief.com/wp-content/uploads/2020/07/mytheresa-30-off-sale.png" alt="sale">
+                <h4>Shop With ModeSens This Holiday</h4>
+                <h5>Score The Best Deals Across Our 500+ Partners</h5>
+                <button>SHOP NOW</button>
+            </div>
+    
+        </div>
+        <button>VIEW MORE</button>
+    </div>
+
+
     <!-- Community -->
     <div class="com">
         <h1>Community Post</h1>
@@ -130,9 +162,68 @@
         </div>
         <button>VIEW ALL</button>
     </div>
-    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>CUSTOMER CARE</h4>
+                    <ul>
+                        <li><a href="#">Shopper Protection</a></li>
+                        <li><a href="#">Loyalty Program</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Size Guides</a></li>
+                        <li><a href="#">Contact Us / Feedback</a></li>
+                        <li><a href="#">Shipping / Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>INFORMATION</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Influeencer Program</a></li>
+                        <li><a href="#">Partner Stores</a></li>
+                        <li><a href="#">Sitemap</a></li> 
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Terms Of Use</a></li>
+                        <li><a href="#">Disclosure</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Community Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>CONNECT WITH</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                        <a href="#"><i class="fab fa-android"></i></a>
+                        <a href="#"><i class="fab fa-chrome"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>   
+                        <a href="#"><i class="fab fa-instagram"></i></a>    
+                        <a href="#"><i class="fab 
+                        fa-weibo" ></i></a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="tag">
+                <p>When you follow our links to visit a brand or retailer's website or make a purchase, ModeSens may earn a commission.</p>
+            </div>
+            <hr>
+           <div>
+                <div class="endline">
+                    <img src="https://cdn.modesens.com/static/img/20180905footer_logo.svg" alt="">
+                    <h5>@2022, ModeSens Inc</h5>      
+                </div>
+           </div>
+        </div>
+   </footer>
 </body>
 <script>
-    
+  
 </script>
 </html>

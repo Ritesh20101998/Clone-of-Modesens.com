@@ -27,11 +27,22 @@ body{
 .navbar{
     display: flex;
     width: 60%;
+    margin: auto;
+    text-align: center;
     /* border: 1px solid red; */
     justify-content: space-evenly;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
+    color: red;
+}
+.navbar > a {
+    text-decoration: none;
+    color: black;
+}
+.navbar > a:hover{
+    font-size: 22px;
+    color: red;
 }
 .navbar-icons{
    color: black;
@@ -43,7 +54,7 @@ body{
 .active {
     /* background-color: black; */
     color:black;
-    font-size:30px;
+    font-size:16px;
     padding: 10px;
     justify-content: space-evenly;
 }
@@ -57,6 +68,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 .slider {
     position: relative;
@@ -110,6 +122,7 @@ body{
 .category{
     margin: auto;
     text-align: center;
+    margin:20px 20px;
 }
 .category h2{
     font-weight: lighter;
@@ -150,6 +163,7 @@ body{
     width: 80%;
     margin: auto;
     text-align: center;
+    
 }
 .varieties > h1{
     font-weight: lighter;
@@ -172,14 +186,55 @@ body{
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    
-}
 
+}
+/* Offers here */
+#special {
+    margin: auto;
+    text-align: center;
+}
+#special > h1{
+    font-weight: lighter;
+    font-family: sans-serif;
+    font-size:36px;
+    margin-bottom: 20px;
+}
+#special > #offers{
+    width: 80%;
+    height: 450px;
+    margin: auto;
+    text-align: center;
+    /* border: 1px solid red; */
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+#offers > div {
+    width: 33%;
+    padding: 15px;
+    /* border: 1px solid red; */
+}
+#offers > div > img{
+    width: 100%;
+    padding: 10px;
+    height: 75%;
+}
+#offers > div > button{
+    width: 120px;
+    height: 35px;
+    margin: 20px;
+}
+#special > button {
+    width: 120px;
+    height: 35px;
+    margin: 20px;
+}
 /* Community */
 .com{
     width: 80%;
     margin: auto;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
     /* border: 1px solid red; */
 }
 .com > h1{
@@ -192,7 +247,6 @@ body{
     margin: auto;
     text-align: center;
     display: flex;
- 
 }
 .com > #community > img{
     /* border:1px solid red; */
@@ -209,4 +263,117 @@ body{
     font-weight: lighter;
     font-family: sans-serif;
     font-size:16px;
+}
+
+/* Footer here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+   
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+/* tagline here */
+.tag{
+    margin: auto;
+    text-align: center;
+    margin-top: 20px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* endline apps here */
+.endline{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    margin-top:10px;
+    background-color: #ffffff;
+}
+.endline > img{
+    width: 30px;
+    display: flex;
+    background-color: #ffffff;
+}
+.endline > h5{
+    margin-top:10px;
+}
+.endline > .apps{
+    display: flex;
+    color: #ffffff;
 }
