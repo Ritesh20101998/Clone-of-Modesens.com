@@ -67,7 +67,7 @@ body{
 /* container */
 #women-container{
     width: 90%;
-    margin: 20px auto;
+    margin: auto;
     text-align: left;
     display: grid;
     padding-bottom: 10px;
@@ -80,6 +80,7 @@ body{
     /* height: auto; */
     padding: 10px;
     margin: auto;
+    margin-top:20px ;
     text-transform: capitalize;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -87,10 +88,11 @@ body{
   
   }
   #women-container > div > img {
-    width: 220px;
+    width: 80%;
     height: 300px;
     margin: auto;
     text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   #women-container > div > button {
     background-color: dodgerblue;
@@ -109,6 +111,22 @@ body{
     }
     
   }
+
+/* filter here*/
+#input{
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    /* border:1px solid red; */
+}
+#filter{
+    font-size: 20px;
+    margin: 0px 15px;
+} 
+#sort{
+    font-size: 20px;  
+}
+
 /* Footer here */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{

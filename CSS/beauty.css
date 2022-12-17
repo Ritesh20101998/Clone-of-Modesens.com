@@ -92,7 +92,8 @@ body{
     width: 80%;
     height: 300px;
     margin: auto;
-    text-align: center;
+    text-align: center; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
   #beauty-container > div > button {
     background-color: dodgerblue;
@@ -100,7 +101,7 @@ body{
     border: 0px;
     font-size: 14px;
     padding: 5px 50px;
-    margin: auto;
+    margin: 10px;
     text-align: center;
   }
 
@@ -110,6 +111,22 @@ body{
       grid-template-columns: repeat(2,1fr);
     }
   }
+
+/* filter here*/
+#input{
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+    /* border:1px solid red; */
+}
+#filter{
+    font-size: 20px;
+    margin: 0px 15px;
+} 
+#sort{
+    font-size: 20px;  
+}
+
 /* Footer here */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{

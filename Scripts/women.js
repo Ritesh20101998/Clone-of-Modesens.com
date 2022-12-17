@@ -4,11 +4,12 @@ let container = document.getElementById("women-container")
 let womenData = [];
 
 let filterSelect = document.getElementById("filter");
+let sort = document.getElementById("sort");
 
   filterSelect.addEventListener("change",()=>{
       let filtered = womenData.filter((element) =>{
         if(element.title== filterSelect.value){
-          return true
+          return true;
         }else{
           return false;    
         }
@@ -16,6 +17,20 @@ let filterSelect = document.getElementById("filter");
       //console.log(filtered);
       womenProducts(filtered);
     })
+
+    function handleSort() {
+      let selecter = sort.value;
+      if(selecter == "h2l"){
+        womenData.sort((a,b) => +b.price - +a.price);
+      } 
+      if(selecter == "l2h"){
+        womenData.sort((a,b) => +a.price - +b.price);
+      }
+      console.log(womenData)
+      container.innerHTML = null
+      womenProducts(womenData);
+    }
+
 
 
 function fetchData(url){
@@ -38,7 +53,7 @@ fetchData(url);
 
 function womenProducts(data = []){
     container.innerHTML = null;
-    data.forEach((element)=>{
+    data.forEach((element,index)=>{
         let box = document.createElement("div");
 
           let image = document.createElement("img")
@@ -51,13 +66,13 @@ function womenProducts(data = []){
           description.innerText = element.description;
 
           let price = document.createElement("p");
-          price.innerText = "₹" + element.price;
+          price.innerText = "₹ " +element.price;
 
           let addToCart = document.createElement("button");
-          addToCart.innerText = "Cart";
+          addToCart.innerText = "Add To Cart";
 
           addToCart.addEventListener("click",() =>{
-            let favData = JSON.parse(localStorage.getItem("women.json")) || [];
+            let favData = JSON.parse(localStorage.getItem("cart")) || [];
   
             let isinCart = false;
             for(let i=0; i<favData.length; i++){
@@ -69,14 +84,14 @@ function womenProducts(data = []){
             if(isinCart == true){
                alert("Product Already in cart");
             } else {
-            favData.push(element)
-            localStorage.setItem("women.json",JSON.stringify(favData));
+            favData.push({...element,quantity:1})
+            localStorage.setItem("cart",JSON.stringify(favData));
             alert("Product Added in cart")
 
             }
           })
 
-        box.append(image,title,description,price, addToCart)
+        box.append(image,title,description,price,addToCart)
         container.append(box);
     })
 

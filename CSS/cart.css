@@ -66,7 +66,16 @@ body{
     justify-content: space-evenly;
 }
 /* container */
-#kids-container{
+#total{
+    width: 50%;
+    font-size: 25px;
+    margin: 10px auto;
+    
+    text-align: center;
+    border: 2px solid black;
+    /* background-color: gray; */
+}
+#cart-container{
     width: 90%;
     margin: auto;
     text-align: left;
@@ -76,7 +85,7 @@ body{
     gap: 15px;
     /* border: 1px solid; */
   }
-  #kids-container > div{
+  #cart-container > div{
     width: 90%;
     /* height: auto; */
     padding: 10px;
@@ -88,14 +97,14 @@ body{
     /* border: 1px solid; */
   
   }
-  #kids-container > div > img {
+  #cart-container > div > img {
     width: 80%;
     height: 300px;
     margin: auto;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   }
-  #kids-container > div > button {
+  #cart-container > div > button {
     background-color: dodgerblue;
     color: white;
     border: 0px;
@@ -104,30 +113,32 @@ body{
     margin: 10px;
     text-align: center;
   }
-
+  #cart-container > div > div{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    
+  }
+  /* #cart-container > div > div > div {
+    border: 1px solid red;
+  } */
+  #cart-container > div > div > div >  button{
+    background-color: dodgerblue;
+    color: white;
+    border: 0px;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+  }
   @media screen and (min-width:200px) and (max-width:850px){
-    #kids-container{
+    #cart-container{
       display: grid;
       grid-template-columns: repeat(2,1fr);
     }
   }
 
-/* filter here*/
-#input{
-    width: 50%;
-    margin: 10px auto;
-    text-align: center;
-    /* border:1px solid red; */
-}
-#filter{
-    font-size: 20px;
-    margin: 0px 15px;
-} 
-#sort{
-    font-size: 20px;  
-}
-
-
+  
 /* Footer here */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
@@ -142,6 +153,7 @@ body{
 .container{
 	max-width: 1170px;
 	margin:auto;
+   
 }
 .row{
 	display: flex;
