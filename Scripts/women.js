@@ -4,11 +4,12 @@ let container = document.getElementById("women-container")
 let womenData = [];
 
 let filterSelect = document.getElementById("filter");
-
+let sort = document.getElementById("sort");
+//filter starts here 
   filterSelect.addEventListener("change",()=>{
       let filtered = womenData.filter((element) =>{
         if(element.title== filterSelect.value){
-          return true
+          return true;
         }else{
           return false;    
         }
@@ -16,7 +17,37 @@ let filterSelect = document.getElementById("filter");
       //console.log(filtered);
       womenProducts(filtered);
     })
+// filter ends here
 
+// sort starts here
+    function handleSort() {
+      let selecter = sort.value;
+      if(selecter == "h2l"){
+        womenData.sort((a,b) => +b.price - +a.price);
+      } 
+      if(selecter == "l2h"){
+        womenData.sort((a,b) => +a.price - +b.price);
+      }
+      console.log(womenData)
+      container.innerHTML = null
+      womenProducts(womenData);
+    }
+
+// sort ends here
+
+// search starts here
+function search(){
+   let q = document.querySelector("#search-inp").value;
+   console.log(q);
+   let newData = womenData.filter((e)=>{
+    return e.description.toLowerCase().includes(q.toLowerCase());
+   })
+  //  console.log(newData);
+  womenProducts(newData);
+}
+// search ends here
+
+// Fetch starts here
 
 function fetchData(url){
     fetch("./programData/women.json")
@@ -34,11 +65,13 @@ function fetchData(url){
 }
 
 fetchData(url);
+// fetch ends here
 
+// women function starts here
 
 function womenProducts(data = []){
     container.innerHTML = null;
-    data.forEach((element)=>{
+    data.forEach((element,index)=>{
         let box = document.createElement("div");
 
           let image = document.createElement("img")
@@ -50,14 +83,14 @@ function womenProducts(data = []){
           let description = document.createElement("p");
           description.innerText = element.description;
 
-          let price = document.createElement("p");
-          price.innerText = "₹" + element.price;
+          let price = document.createElement("h4");
+          price.innerText = "₹ " +element.price;
 
           let addToCart = document.createElement("button");
-          addToCart.innerText = "Cart";
+          addToCart.innerText = "Add To Cart";
 
           addToCart.addEventListener("click",() =>{
-            let favData = JSON.parse(localStorage.getItem("women.json")) || [];
+            let favData = JSON.parse(localStorage.getItem("cart")) || [];
   
             let isinCart = false;
             for(let i=0; i<favData.length; i++){
@@ -69,15 +102,16 @@ function womenProducts(data = []){
             if(isinCart == true){
                alert("Product Already in cart");
             } else {
-            favData.push(element)
-            localStorage.setItem("women.json",JSON.stringify(favData));
+            favData.push({...element,quantity:1})
+            localStorage.setItem("cart",JSON.stringify(favData));
             alert("Product Added in cart")
 
             }
           })
 
-        box.append(image,title,description,price, addToCart)
+        box.append(image,title,description,price,addToCart)
         container.append(box);
     })
 
 }
+// kids function ends here

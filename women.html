@@ -36,18 +36,30 @@
                 <a class="active" id="search" href="#"><i class="fa fa-fw fa-search" style="color:black; font-size: 22px;" ></i></a> 
             </div>
         </div>
-        <select id="filter">
-            <option value="">Select title</option>
-            <option value="Ganni">Ganni</option>
-            <option value="Valentino">Valentino</option>
-            <option value="Zimmerman">Zimmermann</option>
-            <option value="Saint laurent">Saint laurent</option>
-            <option value="Versace">Versace</option>
-            <option value="Gucci">Gucci</option>
-            <option value="attico">attico</option>
-            <option value="Moncler">Moncler</option>
-
-        </select>
+        <div id="input">
+            <!-- filter here -->
+            <select id="filter">
+                <option value="">Select title</option>
+                <option value="Ganni">Ganni</option>
+                <option value="Valentino">Valentino</option>
+                <option value="Zimmerman">Zimmermann</option>
+                <option value="Saint Laurent">Saint laurent</option>
+                <option value="Versace">Versace</option>
+                <option value="Gucci">Gucci</option>
+                <option value="Attico">Attico</option>
+                <option value="Chloe">Chloe</option>
+                <option value="Valentini Garavani">Valentini Garavani</option>
+            </select>
+               
+             <!-- sort here -->
+            <select onChange="handleSort()" id="sort">
+                <option>Select Range</option>
+                <option value="l2h">Low to High</option>
+                <option value="h2l">High to Low</option>
+            </select>
+            
+        </div>
+        
     <!-- container starts here  -->
         <div id="women-container">
             <!-- Here append all the products -->

@@ -31,21 +31,31 @@
     
             </div>
             <div class="navbar-icons">
-                <a class="active" id="cart" href="cart"><i class="fa fa-shopping-cart" style="color:black; font-size: 22px;"></i></a>
-                <a class="active" id="user" href="user"><i class="fa fa-fw fa-user" style="color:black; font-size: 22px;"></i></a> 
+                <a class="active" id="cart" href="cart.html"><i class="fa fa-shopping-cart" style="color:black; font-size: 22px;"></i></a>
+                <a class="active" id="user" href="user.html"><i class="fa fa-fw fa-user" style="color:black; font-size: 22px;"></i></a> 
                 <a class="active" id="search" href="#"><i class="fa fa-fw fa-search" style="color:black; font-size: 22px;" ></i></a> 
             </div>
         </div>
-        <select id="filter">
-            <option value="">Select title</option>
-            <option value="Dr. Barbara Sturm">Dr. Barbara Sturm</option>
-            <option value="Dolce & Gabbana">Dolce & Gabbana</option>
-            <option value="hourglass">Hourglass</option>
-            <option value="tom-ford">Tom-Ford</option>
-            <option value="Gucci">Gucci</option>
-            <option value="Trich Mcevoy">Trich Mcevoy</option>
+        <div id="input">
+            <!-- filter here -->
+            <select id="filter">
+                <option value="">Select title</option>
+                <option value="Dr. Barbara Sturm">Dr. Barbara Sturm</option>
+                <option value="Dolce & Gabbana">Dolce & Gabbana</option>
+                <option value="Hourglass">Hourglass</option>
+                <option value="Tom Ford">Tom Ford</option>
+                <option value="Gucci">Gucci</option>
+                <option value="Trich Mcevoy">Trich Mcevoy</option>
+            </select>
 
-        </select>
+            <!-- sort here -->
+            <select onChange="handleSort()" id="sort">
+                <option>Select Range</option>
+                <option value="l2h">Low to High</option>
+                <option value="h2l">High to Low</option>
+            </select>
+        </div>
+       
         <!-- container starts here  -->
         <div id="beauty-container">
             <!-- Here append all the products -->
