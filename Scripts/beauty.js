@@ -6,6 +6,7 @@ let beautyData = [];
 let filterSelect = document.getElementById("filter");
 let sort = document.getElementById("sort");
 
+//filter starts here 
   filterSelect.addEventListener("change",()=>{
       let filtered = beautyData.filter((element) =>{
         if(element.title== filterSelect.value){
@@ -18,7 +19,9 @@ let sort = document.getElementById("sort");
       container.innerHTML = null
       beautyProducts(filtered);
     })
+// filter ends here
 
+// sort starts here
     function handleSort() {
       let selecter = sort.value;
       if(selecter == "h2l"){
@@ -31,8 +34,21 @@ let sort = document.getElementById("sort");
       container.innerHTML = null
       beautyProducts(beautyData);
     }
+// sort ends here
 
+// search starts here
+function search(){
+  let q = document.querySelector("#search-inp").value;
+  console.log(q);
+  let newData = beautyData.filter((e)=>{
+   return e.description.toLowerCase().includes(q.toLowerCase());
+  })
+ //  console.log(newData);
+ beautyProducts(newData);
+}
+// search ends here
 
+// Fetch starts here
 function fetchData(url){
     fetch("./programData/beauty.json")
     .then((resobj)=>{
@@ -49,8 +65,9 @@ function fetchData(url){
 }
 
 fetchData(url);
+// fetch ends here
 
-
+// beauty function starts here
 function beautyProducts(data = []){
     container.innerHTML = null;
     data.forEach((element,index)=>{
@@ -94,5 +111,5 @@ function beautyProducts(data = []){
         box.append(image,title,description,price, addToCart)
         container.append(box);
     })
-
 }
+// beauty function ends here

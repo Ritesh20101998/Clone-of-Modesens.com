@@ -1,11 +1,12 @@
-
+// carts starts here
 let container = document.getElementById("cart-container")
 let cartData = JSON.parse(localStorage.getItem("cart"));
 let totalPrice = document.getElementById("cart-total");
 
 
 if(cartData == null) cartData = [];
-    
+ 
+// total cart price starts here
 
 function totalPrice1(){
     let sum = 0;
@@ -16,7 +17,9 @@ function totalPrice1(){
   }
   totalPrice1()
   cartProducts(cartData);
+// total cart price ends here
 
+// cartProducts function starts here
 function cartProducts(data){
     container.innerHTML = null;
     data.forEach((element,index)=>{
@@ -31,7 +34,7 @@ function cartProducts(data){
           let description = document.createElement("p");
           description.innerText = element.description;
 
-          let price = document.createElement("p");
+          let price = document.createElement("h4");
           price.innerText = "₹ " +element.price;
 
           let box1 = document.createElement("div");
@@ -50,12 +53,15 @@ function cartProducts(data){
           let remove = document.createElement("button");
           remove.innerText = "Remove";
 
+          // increment starts here
           increment.addEventListener("click",(e)=>{
             quantity.innerText = ++element.quantity;
            // console.log(element.quantity)
             totalPrice1()
           })
+          // increment ends here
 
+          // decrement starts here
           decrement.addEventListener("click",(e)=>{
             if(quantity.innerText < 1){
               quantity.innerText = 0;
@@ -65,13 +71,17 @@ function cartProducts(data){
             totalPrice1()
             // console.log(element.quantity)
           })
+          // decrement ends here
 
+          // remove starts here
           remove.addEventListener("click", ()=>{
             cartData.splice(index,1);
             localStorage.setItem(("cart"),JSON.stringify(cartData));
             cartProducts(cartData)
             totalPrice1();
           })  
+          // remove ends here
+
         div1.append(increment,quantity,decrement)
         div2.append(remove)
         box1.append(div1,div2)
@@ -79,3 +89,4 @@ function cartProducts(data){
         container.append(box);
     })
 }
+// cartProducts function ends here

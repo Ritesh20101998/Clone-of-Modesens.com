@@ -5,7 +5,7 @@ let womenData = [];
 
 let filterSelect = document.getElementById("filter");
 let sort = document.getElementById("sort");
-
+//filter starts here 
   filterSelect.addEventListener("change",()=>{
       let filtered = womenData.filter((element) =>{
         if(element.title== filterSelect.value){
@@ -17,7 +17,9 @@ let sort = document.getElementById("sort");
       //console.log(filtered);
       womenProducts(filtered);
     })
+// filter ends here
 
+// sort starts here
     function handleSort() {
       let selecter = sort.value;
       if(selecter == "h2l"){
@@ -31,7 +33,21 @@ let sort = document.getElementById("sort");
       womenProducts(womenData);
     }
 
+// sort ends here
 
+// search starts here
+function search(){
+   let q = document.querySelector("#search-inp").value;
+   console.log(q);
+   let newData = womenData.filter((e)=>{
+    return e.description.toLowerCase().includes(q.toLowerCase());
+   })
+  //  console.log(newData);
+  womenProducts(newData);
+}
+// search ends here
+
+// Fetch starts here
 
 function fetchData(url){
     fetch("./programData/women.json")
@@ -49,7 +65,9 @@ function fetchData(url){
 }
 
 fetchData(url);
+// fetch ends here
 
+// women function starts here
 
 function womenProducts(data = []){
     container.innerHTML = null;
@@ -65,7 +83,7 @@ function womenProducts(data = []){
           let description = document.createElement("p");
           description.innerText = element.description;
 
-          let price = document.createElement("p");
+          let price = document.createElement("h4");
           price.innerText = "₹ " +element.price;
 
           let addToCart = document.createElement("button");
@@ -96,3 +114,4 @@ function womenProducts(data = []){
     })
 
 }
+// kids function ends here

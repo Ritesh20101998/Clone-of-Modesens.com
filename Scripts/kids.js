@@ -6,6 +6,7 @@ let kidsData = [];
 let filterSelect = document.getElementById("filter");
 let sort = document.getElementById("sort");
 
+//filter starts here 
   filterSelect.addEventListener("change",()=>{
       let filtered = kidsData.filter((element) =>{
         if(element.title== filterSelect.value){
@@ -18,7 +19,9 @@ let sort = document.getElementById("sort");
       container.innerHTML = null
       kidsProducts(filtered);
     })
+// filter ends here
 
+// sort starts here
     function handleSort() {
       let selecter = sort.value;
       if(selecter == "h2l"){
@@ -33,7 +36,22 @@ let sort = document.getElementById("sort");
     }
 
     //handleSort();
+// sort ends here
 
+// search starts here
+function search(){
+  let q = document.querySelector("#search-inp").value;
+  console.log(q);
+  let newData = kidsData.filter((e)=>{
+   //return e.title.toLowerCase().includes(q.toLowerCase());
+   return e.description.toLowerCase().includes(q.toLowerCase());
+  })
+ //  console.log(newData);
+ kidsProducts(newData);
+}
+// search ends here
+
+// Fetch starts here
 function fetchData(url){
     fetch("./programData/kids.json")
     .then((resobj)=>{
@@ -49,7 +67,9 @@ function fetchData(url){
     })
 }
 fetchData(url);
+// fetch ends here
 
+// kids function starts here
 
 function kidsProducts(data){
     container.innerHTML = null;
@@ -97,3 +117,4 @@ function kidsProducts(data){
 
 }
 
+// kids function ends here
