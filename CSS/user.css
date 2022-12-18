@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 150px;
+    background-color: pink;
+}
+.signup{
+    width: 60%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid red;
+}
+#ad{
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    margin: auto;
+    text-align: center;
+    background: black;
+    color: #ffffff;
+    /* border: 1px solid red; */
+    padding-top: 10%;
+}
+#ad > .name{
+    /* border: 1px solid red; */
+    padding: 20px;
+   
+}
+#ad > #not{
+    padding: 40px;
+    /* border: 1px solid red; */
+    margin: auto;
+    text-align: center;
+} 
+#not > div{
+    display: flex;
+    margin: auto;
+    font-size: 16px;
+    padding: 10px 0px;
+    line-height: 20px;
+    text-align: center;
+}
+#not div i{
+    margin-right: 10px;
+}
+#sign{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+#sign h3{
+    padding: 20px;
+}
+#sign p{
+    font-weight: normal;
+    padding: 12px;
+}
+
+#sign input{
+    height: 30px;
+    width: 50%;
+    border: 1px solid black;
+    margin: 5px auto;
+    text-align: center;  
+}
+
+#icons1{
+    display: flex;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    justify-content: space-evenly;
+    /* border: 1px solid red; */
+}
+
+
