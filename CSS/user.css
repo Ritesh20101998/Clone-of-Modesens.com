@@ -57,7 +57,7 @@ body{
     text-align: center;
     /* border: 1px solid red; */
 }
-#sign h3{
+#sign h2{
     padding: 20px;
 }
 #sign p{
@@ -76,10 +76,26 @@ body{
 #icons1{
     display: flex;
     margin: auto;
-    text-align: center;
+    text-align: center; 
     width: 50%;
     justify-content: space-evenly;
     /* border: 1px solid red; */
 }
 
+#icons1 i{
+    font-size: 20px;
+    padding: 6px;
+}
+#icons1 i:hover{
+    background-color: gray;
+}
 
+#sign_btn:hover{
+    cursor: pointer;
+    background-color: rgb(62, 200, 62);
+}
+
+#login_btn:hover{
+    cursor: pointer;
+    background-color: rgb(62, 200, 62);
+}

@@ -10,7 +10,9 @@
     
 </head>
 <body>
+    <!-- log in container starts here -->
     <div class="signup">
+        <!-- ad starts here -->
         <div id="ad">
             <div class="name">
                 <h1>Bunakar Bazaar</h1>
@@ -42,17 +44,19 @@
     
             </div>
         </div>
-    
-        <div id="sign">
-            <h3>Log in to your account</h3>
+        <!-- ad ends here -->
 
-            <p>Unleash your shopping power.<br>Check Bunakar Bazaar before you buy.</p>
+        <!-- Log in starts here -->
+        <div id="sign">
+            <h2>Log in to your account</h2>
+
+            <p>Unleash your shopping power.<br>Check Bunkar Bazaar before you buy.</p>
             <form action="" id="form">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" id="email" placeholder="Enter Email">
+                <input type="password" id="password" placeholder="Enter Password">
           
                 <p>Forget Password?</p>
-                <input class="log" type="button" value="LOG IN">  
+                <input class="log" id="login_btn" type="button" value="LOG IN" onClick="check()">  
             </form>
             
             <p>or</p>
@@ -64,7 +68,9 @@
             </div> 
             <a href="signup.html"><p>Don't have an account? Please sign up</p></a>   
         </div>
+        <!-- Log in ends here -->
     </div>
-   
+   <!-- log in container ends here -->
 </body>
+<script src="./Scripts/user.js"></script>
 </html>

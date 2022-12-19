@@ -19,7 +19,7 @@ body{
     width:20%;
     /* border: 1px solid red; */
 }
-.nav > .logo > img{
+.nav > .logo > a >img{
     width: 80%;
     height: 100%;
     padding-left: 50px;

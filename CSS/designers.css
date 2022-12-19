@@ -1,4 +1,4 @@
-/* Navbar here */
+/* Navbar starts here */
 body{
     margin: 0;
     padding: 0;
@@ -19,11 +19,11 @@ body{
     width:20%;
     /* border: 1px solid red; */
 }
-.nav > .logo > img{
+.nav > .logo > a >img{
     width: 80%;
     height: 100%;
     padding-left: 50px;
-} 
+}  
 .navbar{
     display: flex;
     width: 60%;
@@ -63,8 +63,9 @@ body{
     padding: 10px;
     justify-content: space-evenly;
 }
+/* Navbar ends here */
 
-/* Footer here */
+/* Footer starts here */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
 	line-height: 1.5;
@@ -176,3 +177,4 @@ ul{
     display: flex;
     color: #ffffff;
 }
+/* Footer ends here */

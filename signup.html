@@ -10,7 +10,9 @@
     
 </head>
 <body>
+    <!-- signup container starts here -->
     <div class="signup">
+        <!-- ad starts here -->
         <div id="ad">
             <div class="name">
                 <h1>Bunkar Bazaar</h1>
@@ -38,33 +40,39 @@
                     <i class="fa fa-trophy"></i>
                     <h4>earn points</h4>
                 </div>
-                
-    
             </div>
         </div>
-    
-        <div id="sign">
-            <h3>Create an account</h3>
+        <!-- ad ends here -->
 
-            <p>Unleash your shopping power.<br>Check Bunakar Bazaar before you buy.</p>
+        <!-- signup starts here -->
+        <div id="sign">
+            <h2>Create an account</h2>
+
+            <p>Unleash your shopping power.<br>Check Bunkar Bazaar before you buy.</p>
+            <form id="form">
+                <input type="email" id="email" placeholder="Enter Email" />
+                <input type="password" id="password" placeholder="Enter Password" />
             
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+                <p>Forget Password?</p>
+                <input class="log" id="sign_btn" type="submit" onclick="storeData()"  value="SIGN UP" />  
+
+            </form>
             
-            <p>Forget Password?</p>
-            <input class="log" type="button" value="SIGN UP">  
             <p>or</p>
             <div id="icons1">
                 <a href="www.accounts.google.com"><i class='fa fa-google'></i></a>
-                <i class='fa fa-facebook' style='color:#356ef3'></i>
-                <i class='fa fa-apple'></i>
-                <i class='fa fa-instagram' style='color:#903691'></i>
+                <a href=""><i class='fa fa-facebook' style='color:#356ef3'></i></a>
+                <a href=""><i class='fa fa-apple'></i></a>
+                <a href=""><i class='fa fa-instagram' style='color:#903691'></i></a>
+                
             </div> 
             <a href="user.html"><p>Already have an account? Please sign in</p></a>
             
             <p>By creating an account, I agreed to <br> the <a href="terms.html">Terms of Use</a> and the <a href="privacy.html">Privacy Policy</a></p>
         </div>
+        <!-- signup ends here -->
     </div>
-   
+   <!-- signup container ends -->
 </body>
+<script src="./Scripts/signup.js"></script>
 </html>

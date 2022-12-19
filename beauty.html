@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="./CSS/beauty.css">
 </head>
 <body>
-        <!-- Navbar Here -->
+        <!-- Navbar starts Here -->
         <div class="nav">
             <div class="logo">
-                <img src="Images\logo.jpeg" alt="">
+                <a href="index.html"><img src="Images\logo.jpeg" alt=""></a>
             </div>
             <div class="navbar">
                 <a class="active" href="men.html"><h4>MEN</h4></a>
@@ -33,9 +33,10 @@
             <div class="navbar-icons">
                 <a class="active" id="cart" href="cart.html"><i class="fa fa-shopping-cart" style="color:black; font-size: 22px;"></i></a>
                 <a class="active" id="user" href="user.html"><i class="fa fa-fw fa-user" style="color:black; font-size: 22px;"></i></a> 
-                <a class="active" id="search" href="#"><i class="fa fa-fw fa-search" style="color:black; font-size: 22px;" ></i></a> 
             </div>
         </div>
+        <!-- Navbar ends Here -->
+
         <div id="input">
             <!-- filter here -->
             <select id="filter">
@@ -54,6 +55,11 @@
                 <option value="l2h">Low to High</option>
                 <option value="h2l">High to Low</option>
             </select>
+
+            <!-- search here -->
+            <div id="search">
+                <input oninput="search()" type="text" placeholder="Search Products" id="search-inp" />
+            </div>
         </div>
        
         <!-- container starts here  -->
@@ -62,7 +68,7 @@
         </div>
         <!-- container ends here  -->
 
-         <!-- Footer -->
+         <!-- Footer starts here -->
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -109,10 +115,12 @@
                     </div>
                 </div>
             </div>
+            <!-- tagline here -->
             <div class="tag">
-                <p>When you follow our links to visit a brand or retailer's website or make a purchase, ModeSens may earn a commission.</p>
+                <p>When you follow our links to visit a brand or retailer's website or make a purchase, Bunkar Bazaar  may earn a commission.</p>
             </div>
             <hr>
+            <!-- endline here -->
            <div>
                 <div class="endline">
                     <img src="https://cdn.modesens.com/static/img/20180905footer_logo.svg" alt="">
@@ -121,6 +129,7 @@
            </div>
         </div>
    </footer>
+   <!-- Footer ends here -->
 </body>
 <script src="./Scripts/beauty.js"></script>
 </html>

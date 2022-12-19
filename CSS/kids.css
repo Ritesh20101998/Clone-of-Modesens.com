@@ -19,11 +19,11 @@ body{
     width:20%;
     /* border: 1px solid red; */
 }
-.nav > .logo > img{
+.nav > .logo > a >img{
     width: 80%;
     height: 100%;
     padding-left: 50px;
-} 
+}  
 .navbar{
     display: flex;
     width: 60%;
@@ -43,6 +43,7 @@ body{
 }
 .navbar > a:hover{
     /* font-size: 22px; */
+    background-color: aliceblue;
     color: red;
     text-decoration: underline;
 }
@@ -65,7 +66,9 @@ body{
     padding: 10px;
     justify-content: space-evenly;
 }
-/* container */
+/* Navbar ends here */
+
+/* kids-container starts here */
 #kids-container{
     width: 90%;
     margin: auto;
@@ -111,24 +114,37 @@ body{
       grid-template-columns: repeat(2,1fr);
     }
   }
+/* kids-container ends here */
 
-/* filter here*/
+/* filter/sort/search starts here*/
 #input{
-    width: 50%;
+    display: flex;
+    width: 60%;
     margin: 10px auto;
     text-align: center;
+    justify-content: space-evenly;
     /* border:1px solid red; */
 }
 #filter{
-    font-size: 20px;
+    font-size: 18px;
     margin: 0px 15px;
 } 
 #sort{
-    font-size: 20px;  
+    font-size: 18px;  
+    padding: 0px 15px;
+}
+#search-inp{
+    font-size: 18px;
+    padding: 0px 5px;  
+}
+#search-btn{
+    font-size: 18px;
+    padding: 0px 5px;  
 }
 
+/* filter/sort/search starts here*/
 
-/* Footer here */
+/* Footer starts here */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 body{
 	line-height: 1.5;
@@ -239,3 +255,4 @@ ul{
     display: flex;
     color: #ffffff;
 }
+/* Footer ends here*/
