@@ -19,11 +19,11 @@ body{
     width:20%;
     /* border: 1px solid red; */
 }
-.nav > .logo > img{
-    width: 80%;
-    height: 100%;
-    padding-left: 50px;
-} 
+.nav > .logo > a >img{
+  width: 80%;
+  height: 100%;
+  padding-left: 50px;
+}  
 .navbar{
     display: flex;
     width: 60%;
