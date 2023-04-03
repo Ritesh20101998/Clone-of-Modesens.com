@@ -12,9 +12,14 @@ let form = document.getElementById("form");
       if(LSData == null){
         LSData = [];
       }
-      LSData.push(obj);
+      else{
+        LSData.push(obj);
       localStorage.setItem("accountList",JSON.stringify(LSData));
       alert("Account Created Successfully")
+      location.href = "./index.html";
+      
+      }
+      
     })
 // signup storing data ends here
 

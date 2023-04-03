@@ -4,7 +4,7 @@ let container = document.getElementById("men-container")
 let menData = [];
 
 let filterSelect = document.getElementById("filter");
-let sort = document.getElementById("sort");
+
 //filter starts here 
   filterSelect.addEventListener("change",()=>{
       let filtered = menData.filter((element) =>{
@@ -20,6 +20,7 @@ let sort = document.getElementById("sort");
 // filter ends here
 
 // sort starts here
+let sort = document.getElementById("sort");
     function handleSort() {
       let selecter = sort.value;
       if(selecter == "h2l"){

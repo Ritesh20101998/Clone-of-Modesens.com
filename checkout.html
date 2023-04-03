@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+    <!-- Custom css links-->
+    <link rel="stylesheet" href="./CSS/checkout.css">
+</head>
+<body>
+        <!-- Navbar starts Here -->
+        <div class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="Images\logo.jpeg" alt=""></a>
+            </div>
+            <div class="navbar">
+                <a class="active" href="men.html"><h4>MEN</h4></a>
+                <a class="active" href="women.html"><h4>WOMEN</h4></a>
+                <a class="active" href="kids.html"><h4>KIDS</h4></a>
+                <a class="active" href="beauty.html"><h4>BEAUTY</h4></a>
+                <a class="active" href="home.html"><h4>HOME</h4></a>
+                <a class="active" href="designers.html"><h4>DESIGNERS</h4></a>
+                <a class="active" href="community.html"><h4>COMMUNITY</h4></a>
+                <a class="active" href="sale.html"><h4>SALE</h4></a>
+                <a class="active" href="gift.html"><h4>GIFT GUIDE</h4></a>
+    
+            </div>
+            <div class="navbar-icons">
+                <a class="active" id="cart" href="cart.html"><i class="fa fa-shopping-cart" style="color:black; font-size: 22px;"></i></a>
+                <a class="active" id="user" href="user.html"><i class="fa fa-fw fa-user" style="color:black; font-size: 22px;"></i></a> 
+            </div>
+        </div>
+        <!-- Navbar ends here -->
+
+<!-- checkout details starts here -->
+
+<div id="billing">
+    <div id="checkout">
+        <div id="address">
+        <h2>Billing Address</h2>
+        <label>First Name</label><br />
+          <input type="text" name="name" id="Fname" required /><br />
+          <label>Last Name</label><br />
+          <input type="text" name="name" id="Lname" required /><br />
+          <label>Email</label><br />
+          <input type="text" name="email" id="email" required /><br />
+          <label for="country">Country:</label>
+          <select id="country" name="country">
+            <option value="">Select Country</option>
+
+            <option value="Afghanistan">Afghanistan</option>
+            <option value="Australia">Australia</option>
+            <option value="Canada">Canada</option>
+            <option value="China">China</option>
+            <option value="Germany">Germany</option>
+            <option value="India">India</option>
+
+            <option value="Nepal">Nepal</option>
+
+            <option value="Sri Lanka">Sri Lanka</option>
+            
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="United States">USA</option>
+          </select>
+          <br />
+          <label for="state">Address </label><br />
+          <input type="text" name="Address" id="Address" required /><br />
+          <label for="city">City / Suburb</label><br />
+          <input type="text" name="city" id="city" required /><br />
+          <label for="pincode">Zip / Postcode</label><br />
+          <input type="text" name="pincode" id="pincode" required /><br />
+          <label for="mobile">Mobile Phone</label><br />
+          <input type="number" name="mobile" id="mobile" required /><br />
+
+          <input type="submit" name="Submit" id="submit" onclick="submit()" /><br />
+        
+      </div>
+      <!-- <div id="option">
+        
+          <input
+            type="radio"
+            id="show-form"
+            name="form-type"
+            value="show-form"
+          />
+          <label for="show-form">Add an alternative delivery address </label>
+          <br />
+
+          <input
+            type="radio"
+            id="hide-form"
+            name="form-type"
+            value="hide-form"
+          />
+          <label for="hide-form">Default (same as billing address)</label>
+
+          <div id="form-container" style="display: none">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" /><br />
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" /><br />
+
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+              <option value="">--Select Country--</option>
+              <option value="Afghanistan">Afghanistan</option>
+              <option value="Australia">Australia</option>
+              <option value="Canada">Canada</option>
+              <option value="China">China</option>
+              <option value="india">India</option>
+
+              <option value="Nepal">Nepal</option>
+
+              <option value="Sri Lanka">Sri Lanka</option>
+              <option value="UAE">UAE</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Ukraine">Ukraine</option>
+              <option value="United States Of America ">USA</option>
+            </select>
+            <br />
+
+            <label for="address1">Address1:</label>
+            <input type="text" id="address1" name="address1" /><br />
+
+            <label for="address2">Address2:</label>
+            <input type="text" id="address2" name="address2" /><br />
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" /><br />
+
+            <label for="pincode">Pincode:</label>
+            <input type="text" id="pincode" name="pincode" /><br />
+
+            <label for="mobile-number">Mobile Number:</label>
+            <input type="text" id="mobile-number" name="mobile-number" /><br />
+          </div>
+        
+         </div> -->
+        <div id="payment">
+            <h2>Payment Details</h2>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required />
+            <label for="expiration-date">Expiration Date:</label>
+            <input
+                type="text"
+                id="expiration-date"
+                name="expiration-date"
+                required
+            />
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required />
+            <label for="name-on-card">Name on Card:</label>
+            <input type="text" id="name-on-card" name="name-on-card" required />
+            
+            <p id="tnc">
+            By clicking Pay and place order, you agree to purchase your <br> item(s)
+            from Global-e as merchant of record for this transaction, <br> on
+            Global-e's Terms and Conditions and Privacy Policy. Global-e is <br> an 
+            international fulfilment service provider to Fullbeauty Brands.
+            </p>
+<input type="submit" id="loginbtn()"  value="Pay and Place Order">
+        </div>   
+    </div>
+</div>
+
+<!-- checkout details ends here -->
+
+<!-- Footer starts here -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h4>CUSTOMER CARE</h4>
+                <ul>
+                    <li><a href="#">Shopper Protection</a></li>
+                    <li><a href="#">Loyalty Program</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Size Guides</a></li>
+                    <li><a href="#">Contact Us / Feedback</a></li>
+                    <li><a href="#">Shipping / Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>INFORMATION</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Influeencer Program</a></li>
+                    <li><a href="#">Partner Stores</a></li>
+                    <li><a href="#">Sitemap</a></li> 
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Disclosure</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Community Guidelines</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>CONNECT WITH</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                    <a href="#"><i class="fab fa-android"></i></a>
+                    <a href="#"><i class="fab fa-chrome"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>   
+                    <a href="#"><i class="fab fa-instagram"></i></a>    
+                    <a href="#"><i class="fab 
+                    fa-weibo" ></i></a>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- tagline here -->
+        <div class="tag">
+            <p>When you follow our links to visit a brand or retailer's website or make a purchase, Bunkar Bazaar  may earn a commission.</p>
+        </div>
+        <hr>
+        <!-- endline here -->
+       <div>
+            <div class="endline">
+                <img src="https://cdn.modesens.com/static/img/20180905footer_logo.svg" alt="">
+                <h5>@2022, ModeSens Inc</h5>      
+            </div>
+       </div>
+    </div>
+</footer>
+<!-- footer ends here -->
+</body>
+<script src="./Scripts/checkout.js"></script>
+</html>
