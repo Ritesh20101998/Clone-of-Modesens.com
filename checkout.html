@@ -41,9 +41,9 @@
 
 <div id="billing">
     <div id="checkout">
-        <div id="address">
+        <form id="billform">
         <h2>Billing Address</h2>
-        <label>First Name</label><br />
+          <label>First Name</label><br />
           <input type="text" name="name" id="Fname" required /><br />
           <label>Last Name</label><br />
           <input type="text" name="name" id="Lname" required /><br />
@@ -70,17 +70,17 @@
           </select>
           <br />
           <label for="state">Address </label><br />
-          <input type="text" name="Address" id="Address" required /><br />
+          <input type="text" name="address" id="address" required /><br />
           <label for="city">City / Suburb</label><br />
           <input type="text" name="city" id="city" required /><br />
           <label for="pincode">Zip / Postcode</label><br />
-          <input type="text" name="pincode" id="pincode" required /><br />
+          <input type="number" name="pincode" id="pincode" required /><br />
           <label for="mobile">Mobile Phone</label><br />
           <input type="number" name="mobile" id="mobile" required /><br />
 
-          <input type="submit" name="Submit" id="submit" onclick="submit()" /><br />
+          <input type="submit" name="Submit" id="submit"  /><br />
         
-      </div>
+        </form>
       <!-- <div id="option">
         
           <input
@@ -143,14 +143,14 @@
           </div>
         
          </div> -->
-        <div id="payment">
+        <form id="payment">
             <h2>Payment Details</h2>
             <label for="card-number">Card Number:</label>
             <input type="text" id="card-number" name="card-number" required />
             <label for="expiration-date">Expiration Date:</label>
             <input
-                type="text"
-                id="expiration-date"
+                type="date"
+                id="expiry-date"
                 name="expiration-date"
                 required
             />
@@ -165,8 +165,8 @@
             Global-e's Terms and Conditions and Privacy Policy. Global-e is <br> an 
             international fulfilment service provider to Fullbeauty Brands.
             </p>
-<input type="submit" id="loginbtn()"  value="Pay and Place Order">
-        </div>   
+            <a href="ordersuccessful.html"><button type="submit" id="loginbtn" style="background-color: green;color:white";>Pay and Place Order</button></a>
+        </form>   
     </div>
 </div>
 

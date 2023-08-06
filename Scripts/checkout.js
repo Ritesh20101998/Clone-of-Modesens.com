@@ -1,59 +1,64 @@
+let billing = document.getElementById("billing")
+let checkout = document.getElementById("checkout")
+let billform = document.getElementById("billform")
+
+let fname = document.getElementById("Fname")
+let lname = document.getElementById("Lname")
+let email = document.getElementById("email")
+let country = document.getElementById("country")
 let address = document.getElementById("address")
+let city = document.getElementById("city")
+let pincode = document.getElementById("pincode")
+let mobile = document.getElementById("mobile")
+let submit = document.getElementById("submit")
 
-address.addEventListener("submit",(e)=>{
+billform.addEventListener("submit",(e) => {
     e.preventDefault();
-    let obj = {
-        fname:address.Fname.value,
-        lname:address.Lname.value,
-        email:address.email.value,
-        country:address.country.value,
-        address:address.address.value,
-        city:address.city.value,
-        pincode:address.pincode.value,
-        mobile:address.pincode.value
-    }
-    console.log(obj)
 
-    if(!fname || !lname || !email || !country || !address || !city || !pincode || !mobile){
-        alert("Pls fill the datails!")
+    let obj = {
+        fname: fname.value,
+        lname: lname.value,
+        email: email.value,
+        country: country.value,
+        address : address.value,
+        city : city.value,
+        pincode : pincode.value,
+        mobile : mobile.value
     }
+    // console.log(obj)
     
-    let add = JSON.parse(localStorage.getItem("addressData"))
-    if(add===null){
-        add = []
-    }else{
-        add.push(obj)
-        localStorage.setItem("addressData",JSON.stringify(add))
-        alert("Address details enter successfully")
-    }
-    
+    let formDataArr = JSON.parse(localStorage.getItem("user"))  || [];
+
+    formDataArr.push(obj);
+    console.log(formDataArr)
+    localStorage.setItem("user", JSON.stringify(formDataArr));
+
+    alert("address details successfully updated")
 })
 
+let form = document.getElementById('payment')
+let card_number = document.getElementById('card-number')
+let expiry_date = document.getElementById('expiry-date')
+let cvv = document.getElementById('cvv')
+let name = document.getElementById('name-on-card')
+let loginbtn = document.getElementById('loginbtn')
 
-let payment = document.getElementById("payment")
+form.addEventListener('submit',(e)=>{
+    e.preventDefault()
 
-loginbtn.addEventListener("submit",(e)=>{
-    e.preventDefault();
-    let obj1 = {
-        card_number:payment.card_number.value,
-        expiry:payment.expiry.value,
-        cvv:payment.cvv.value,
-        name:payment.name.value
-    }
-    console.log(obj1)
-    let pay = JSON.parse(localStorage.getItem("paymentData"))
+    let paymentobj = {
+        card_number : card_number.value,
+        expiry_date : expiry_date.value,
+        cvv : cvv.value,
+        name : name.value
+    } 
+    // console.log(paymentobj)
 
-    if(!card_number || !expiry || !cvv || !name || !add ){
-        alert("Pls fill the datails!")
-    }
-    
-    
-    if(pay===null){
-        pay = []
-    }else{
-        pay.push(obj1)
-        localStorage.setItem("paymentData",JSON.stringify(pay))
-        alert("Payment details enter successfully")
-    }
-    
+    paymentArr = JSON.parse(localStorage.getItem('paymentData')) || [];
+
+    paymentArr.push(paymentobj)
+    console.log(paymentArr)
+    localStorage.setItem('paymentData', JSON.stringify(paymentArr))
+    alert('payment details updated successfully')
+    // window.location.href = "ordersuccessfull.html"
 })
